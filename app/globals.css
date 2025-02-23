@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 60 100% 97%;
+    --foreground: 0 0% 0%;
+    
+    --primary: 0 0% 0%;
+    --primary-foreground: 60 100% 97%;
+    
+    --secondary: 43 100% 36%;
+    --secondary-foreground: 60 100% 97%;
+    
+    --accent: 82 22% 29%;
+    --accent-foreground: 60 100% 97%;
+    
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 0%;
+    
+    --radius: 0.5rem;
+  }
+
+  body {
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .container {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-cream hover:bg-primary/90;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary text-cream hover:bg-secondary/90;
+  }
+
+  .btn-outline {
+    @apply border border-primary bg-transparent hover:bg-primary hover:text-cream;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
